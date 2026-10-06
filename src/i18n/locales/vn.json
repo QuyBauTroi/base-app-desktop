@@ -1,0 +1,96 @@
+{
+  "common": {
+    "cancel": "Huỷ",
+    "save": "Lưu",
+    "edit": "Chỉnh sửa",
+    "on": "Bật"
+  },
+  "login": {
+    "welcome": "Chào mừng trở lại",
+    "subtitle": "Đăng nhập để tiếp tục",
+    "username": "Tên đăng nhập",
+    "username_placeholder": "Nhập tên đăng nhập",
+    "password": "Mật khẩu",
+    "password_placeholder": "Nhập mật khẩu",
+    "forgot_password": "Quên mật khẩu?",
+    "sign_in": "Đăng nhập",
+    "or": "hoặc",
+    "login_google": "Đăng nhập với Google",
+    "no_account": "Chưa có tài khoản?",
+    "register": "Đăng ký"
+  },
+  "register": {
+    "title": "Tạo tài khoản",
+    "subtitle": "Đăng ký để bắt đầu sử dụng",
+    "username": "Tên đăng nhập",
+    "username_placeholder": "Nhập tên đăng nhập",
+    "email": "Email",
+    "email_placeholder": "Nhập địa chỉ email",
+    "password": "Mật khẩu",
+    "password_placeholder": "Nhập mật khẩu",
+    "confirm_password": "Xác nhận mật khẩu",
+    "confirm_password_placeholder": "Nhập lại mật khẩu",
+    "submit": "Đăng ký",
+    "back_to_login": "Quay lại đăng nhập",
+    "agree_to": "Bằng việc đăng ký, bạn đồng ý với",
+    "terms_of_service": "Điều khoản dịch vụ",
+    "and": "và",
+    "privacy_policy": "Chính sách quyền riêng tư"
+  },
+  "forgot_password": {
+    "title": "Quên mật khẩu",
+    "subtitle": "Nhập email để đặt lại mật khẩu",
+    "email": "Email",
+    "email_placeholder": "Nhập địa chỉ email",
+    "submit": "Gửi yêu cầu",
+    "back_to_login": "Quay lại đăng nhập",
+    "success_message": "Chúng tôi đã gửi hướng dẫn đặt lại mật khẩu đến email của bạn."
+  },
+  "dashboard": {
+    "sidebar": {
+      "overview": "Tổng quan",
+      "devices": "Thiết bị",
+      "rooms": "Khu vực",
+      "scenes": "Kịch bản",
+      "automation": "Tự động hoá",
+      "schedule": "Lịch trình",
+      "notifications": "Thông báo",
+      "members": "Thành viên",
+      "security": "An ninh",
+      "settings": "Cài đặt"
+    },
+    "header": {
+      "welcome": "Xin chào, Admin"
+    },
+    "settings": {
+      "theme": "Giao diện",
+      "language": "Ngôn ngữ",
+      "section_display": "Giao diện & Hiển thị",
+      "section_account": "Tài khoản",
+      "primary_color": "Màu chủ đạo",
+      "custom": "Tùy chỉnh",
+      "font": "Phông chữ",
+      "scale": "Kích thước",
+      "theme_dark": "Tối",
+      "theme_light": "Sáng",
+      "theme_system": "Hệ thống",
+      "change_password": "Đổi mật khẩu",
+      "security": "Bảo mật",
+      "linked_devices": "Thiết bị",
+      "help": "Trợ giúp",
+      "logout": "Đăng xuất",
+      "logout_confirm": "Bạn có chắc chắn muốn đăng xuất khỏi tài khoản này không?",
+      "logout_success": "Đã đăng xuất thành công!",
+      "feature_coming_soon": "Tính năng {{feature}} đang được phát triển"
+    },
+    "profile": {
+      "title": "Thông tin tài khoản",
+      "role_admin": "Quản trị viên",
+      "email": "Email",
+      "phone": "Số điện thoại",
+      "address": "Địa chỉ",
+      "company": "Công ty",
+      "join_date": "Ngày tham gia"
+    }
+  }
+}

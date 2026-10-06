@@ -1,0 +1,284 @@
+@import "tailwindcss";
+
+/* ============================================================
+   DESIGN TOKENS - Inspired Premium UI
+   ============================================================ */
+
+@theme {
+  /* ===========================================
+     SEMANTIC COLORS
+     (Overridden by ThemeProvider from config)
+     =========================================== */
+  --color-primary: #008C4F;
+  --color-primary-light: #00A85D;
+  --color-primary-dark: #006B3C;
+  --color-secondary: #3E88F7;
+  --color-success: #34C759;
+  --color-warning: #FF9500;
+  --color-error: #FF3B30;
+  --color-info: #5856D6;
+
+  /* Light Mode Surfaces */
+  --color-bg-base: #FFFFFF;
+  --color-bg-layer-1: #F0F2F5;
+  --color-bg-layer-2: #E4E6EB;
+  --color-text-main: #050505;
+  --color-text-muted: #65676B;
+
+  /* Dark Mode Surfaces (OLED Black) */
+  --color-bg-base-dark: #000000;
+  --color-bg-layer-1-dark: #1C1C1D;
+  --color-bg-layer-2-dark: #2C2C2E;
+  --color-text-main-dark: #FFFFFF;
+  --color-text-muted-dark: #8E8E93;
+
+  /* ===========================================
+     TYPOGRAPHY
+     =========================================== */
+  --font-sans: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: JetBrains Mono, Menlo, Monaco, monospace;
+
+  /* ===========================================
+     BORDER RADIUS
+     =========================================== */
+  --radius-none: 0px;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* ===========================================
+     SHADOWS (Telegram-like soft shadows)
+     =========================================== */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 12px 32px rgba(0, 0, 0, 0.16);
+  --shadow-primary: 0 4px 14px rgba(0, 140, 79, 0.35);
+
+  /* ===========================================
+     ANIMATION TOKENS
+     =========================================== */
+  --duration-instant: 50ms;
+  --duration-fast: 100ms;
+  --duration-normal: 200ms;
+  --duration-slow: 300ms;
+  --duration-slower: 500ms;
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* ===========================================
+     ACCESSIBILITY SCALE
+     =========================================== */
+  --ui-scale: 1;
+}
+
+/* ============================================================
+   DYNAMIC THEME VARIABLES
+   ============================================================ */
+
+:root {
+  --bg-base: var(--color-bg-base);
+  --bg-layer-1: var(--color-bg-layer-1);
+  --bg-layer-2: var(--color-bg-layer-2);
+  --text-main: var(--color-text-main);
+  --text-muted: var(--color-text-muted);
+
+  /* Component defaults */
+  --focus-ring: var(--color-primary);
+  --divider: rgba(0, 0, 0, 0.08);
+
+  /* Device Card Colors - Light Mode */
+  --card-on-bg: #FFFFFF;
+  --card-on-text: #1F2937;
+  --card-on-text-muted: #6B7280;
+  --card-on-icon-bg: rgba(0, 0, 0, 0.05);
+  --card-off-bg: #F3F4F6;
+  --card-off-text: #374151;
+  --card-off-text-muted: #9CA3AF;
+  --card-off-icon-bg: rgba(0, 0, 0, 0.03);
+  --card-off-icon-color: #9CA3AF;
+}
+
+/* Dark mode via system preference */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-base: var(--color-bg-base-dark);
+    --bg-layer-1: var(--color-bg-layer-1-dark);
+    --bg-layer-2: var(--color-bg-layer-2-dark);
+    --text-main: var(--color-text-main-dark);
+    --text-muted: var(--color-text-muted-dark);
+    --divider: rgba(255, 255, 255, 0.08);
+
+    /* Device Card Colors */
+    --card-on-bg: #FFFFFF;
+    --card-on-text: #1F2937;
+    --card-on-text-muted: #6B7280;
+    --card-on-icon-bg: rgba(0, 0, 0, 0.05);
+    --card-off-bg: #27272A;
+    --card-off-text: #E4E4E7;
+    --card-off-text-muted: #A1A1AA;
+    --card-off-icon-bg: rgba(255, 255, 255, 0.08);
+    --card-off-icon-color: #71717A;
+  }
+}
+
+/* Manual dark mode toggle */
+:root.dark {
+  --bg-base: var(--color-bg-base-dark);
+  --bg-layer-1: var(--color-bg-layer-1-dark);
+  --bg-layer-2: var(--color-bg-layer-2-dark);
+  --text-main: var(--color-text-main-dark);
+  --text-muted: var(--color-text-muted-dark);
+  --divider: rgba(255, 255, 255, 0.08);
+
+  /* Device Card Colors - Dark Mode */
+  --card-on-bg: #FFFFFF;
+  --card-on-text: #1F2937;
+  --card-on-text-muted: #6B7280;
+  --card-on-icon-bg: rgba(0, 0, 0, 0.05);
+  --card-off-bg: #27272A;
+  --card-off-text: #E4E4E7;
+  --card-off-text-muted: #A1A1AA;
+  --card-off-icon-bg: rgba(255, 255, 255, 0.08);
+  --card-off-icon-color: #71717A;
+}
+
+/* Manual light mode toggle */
+:root.light {
+  --bg-base: var(--color-bg-base);
+  --bg-layer-1: var(--color-bg-layer-1);
+  --bg-layer-2: var(--color-bg-layer-2);
+  --text-main: var(--color-text-main);
+  --text-muted: var(--color-text-muted);
+  --divider: rgba(0, 0, 0, 0.08);
+}
+
+/* ============================================================
+   BASE STYLES
+   ============================================================ */
+
+body {
+  @apply bg-(--bg-base) text-(--text-main) antialiased;
+  font-family: var(--font-sans);
+  transition: background-color var(--duration-normal) var(--ease-smooth),
+    color var(--duration-normal) var(--ease-smooth);
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Allow text selection in inputs and textareas */
+input,
+textarea,
+[contenteditable="true"] {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+/* Selection styling */
+::selection {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+/* ============================================================
+   UTILITY CLASSES
+   ============================================================ */
+
+/* Tactile press effect (Telegram-style) */
+.active-press {
+  @apply active:scale-[0.98] transition-transform;
+  transition-duration: var(--duration-fast);
+  transition-timing-function: var(--ease-smooth);
+}
+
+/* Deep press for buttons */
+.active-press-deep {
+  @apply active:scale-[0.96] transition-transform;
+  transition-duration: var(--duration-fast);
+  transition-timing-function: var(--ease-spring);
+}
+
+/* Glassmorphism panel */
+.glass-panel {
+  @apply backdrop-blur-2xl border-b shadow-sm;
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+:root.dark .glass-panel {
+  background: rgba(28, 28, 29, 0.8);
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Focus ring (accessible) */
+.focus-ring {
+  @apply outline-none;
+}
+
+.focus-ring:focus-visible {
+  @apply ring-2 ring-offset-2;
+  ring-color: var(--focus-ring);
+  ring-offset-color: var(--bg-base);
+}
+
+/* ============================================================
+   SCROLLBAR STYLING
+   ============================================================ */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-500/20 rounded-full hover:bg-gray-500/40 cursor-pointer;
+  transition: background-color var(--duration-fast);
+}
+
+:root.dark ::-webkit-scrollbar-thumb {
+  @apply bg-white/10 hover:bg-white/20;
+}
+
+/* ============================================================
+   TYPOGRAPHY SCALE (respects --ui-scale)
+   ============================================================ */
+
+.text-scale-xs {
+  font-size: calc(0.75rem * var(--ui-scale));
+  line-height: calc(1rem * var(--ui-scale));
+}
+
+.text-scale-sm {
+  font-size: calc(0.875rem * var(--ui-scale));
+  line-height: calc(1.25rem * var(--ui-scale));
+}
+
+.text-scale-base {
+  font-size: calc(1rem * var(--ui-scale));
+  line-height: calc(1.5rem * var(--ui-scale));
+}
+
+.text-scale-lg {
+  font-size: calc(1.125rem * var(--ui-scale));
+  line-height: calc(1.75rem * var(--ui-scale));
+}
+
+.text-scale-xl {
+  font-size: calc(1.25rem * var(--ui-scale));
+  line-height: calc(1.75rem * var(--ui-scale));
+}
+
+.text-scale-2xl {
+  font-size: calc(1.5rem * var(--ui-scale));
+  line-height: calc(2rem * var(--ui-scale));
+}

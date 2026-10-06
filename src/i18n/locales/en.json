@@ -1,0 +1,96 @@
+{
+  "common": {
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "on": "On"
+  },
+  "login": {
+    "welcome": "Welcome Back",
+    "subtitle": "Sign in to continue",
+    "username": "Username",
+    "username_placeholder": "Enter username",
+    "password": "Password",
+    "password_placeholder": "Enter password",
+    "forgot_password": "Forgot password?",
+    "sign_in": "Sign In",
+    "or": "or",
+    "login_google": "Sign in with Google",
+    "no_account": "Don't have an account?",
+    "register": "Register"
+  },
+  "register": {
+    "title": "Create Account",
+    "subtitle": "Sign up to get started",
+    "username": "Username",
+    "username_placeholder": "Enter username",
+    "email": "Email",
+    "email_placeholder": "Enter email address",
+    "password": "Password",
+    "password_placeholder": "Enter password",
+    "confirm_password": "Confirm Password",
+    "confirm_password_placeholder": "Re-enter password",
+    "submit": "Register",
+    "back_to_login": "Back to login",
+    "agree_to": "By registering, you agree to our",
+    "terms_of_service": "Terms of Service",
+    "and": "and",
+    "privacy_policy": "Privacy Policy"
+  },
+  "forgot_password": {
+    "title": "Forgot Password",
+    "subtitle": "Enter your email to reset password",
+    "email": "Email",
+    "email_placeholder": "Enter email address",
+    "submit": "Send Request",
+    "back_to_login": "Back to login",
+    "success_message": "We've sent password reset instructions to your email."
+  },
+  "dashboard": {
+    "sidebar": {
+      "overview": "Overview",
+      "devices": "Devices",
+      "rooms": "Rooms",
+      "scenes": "Scenes",
+      "automation": "Automation",
+      "schedule": "Schedule",
+      "notifications": "Notifications",
+      "members": "Members",
+      "security": "Security",
+      "settings": "Settings"
+    },
+    "header": {
+      "welcome": "Welcome back, Admin"
+    },
+    "settings": {
+      "theme": "Theme",
+      "language": "Language",
+      "section_display": "Display & Appearance",
+      "section_account": "Account",
+      "primary_color": "Primary Color",
+      "custom": "Custom",
+      "font": "Font",
+      "scale": "Scale",
+      "theme_dark": "Dark",
+      "theme_light": "Light",
+      "theme_system": "System",
+      "change_password": "Change Password",
+      "security": "Security",
+      "linked_devices": "Devices",
+      "help": "Help",
+      "logout": "Logout",
+      "logout_confirm": "Are you sure you want to log out of this account?",
+      "logout_success": "Logged out successfully!",
+      "feature_coming_soon": "Feature {{feature}} is coming soon"
+    },
+    "profile": {
+      "title": "Account Info",
+      "role_admin": "Administrator",
+      "email": "Email",
+      "phone": "Phone Number",
+      "address": "Address",
+      "company": "Company",
+      "join_date": "Joined"
+    }
+  }
+}
